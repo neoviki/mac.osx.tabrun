@@ -1,0 +1,40 @@
+#!/bin/bash
+
+: '
+    tabrun: run command on tab  [ MAC OS Terminal ]
+
+        Author    : Viki - Vignesh Natarajan
+        Contact   : vikiworks.io
+'
+
+C1="tell application \"Terminal\""
+C2="tell application \"System Events\" to keystroke \"t\" using {command down}" 
+C3="end tell"
+
+run_cmd_in_new_tab() {
+  tn=$1
+  cmd=$2
+  
+  osascript -e "$C1" -e "$C2" -e "do script \"printf '\\\e]1;$tn\\\a'; $cmd\" in front window" \
+    -e "$C3" > /dev/null
+}
+
+tab_name=$1
+new_cmd=$2
+
+
+if [ -z "$2" ]; then
+    echo
+    echo "      Usage: tabrun <new_tab_name> <command to run>"
+    echo
+    echo
+    echo "      Example 1: tabrun mytab ls"
+    echo
+    echo
+    echo '      Example 2: tabrun mytab "/home/test.sh"'
+    echo
+    echo
+    exit 1
+fi
+
+run_cmd_in_new_tab $tab_name $new_cmd
