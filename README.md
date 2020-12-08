@@ -1,6 +1,6 @@
 ## tabrun: Utility to run commands in a new terminal tab
 
-	This utility can be used to run bash commands in a new terminal.  The utility would be handy for development and test automation.
+This utility can be used to run bash commands in a new terminal.  The utility would be handy for development and test automation.
 
 ### How to use this utility?
 
