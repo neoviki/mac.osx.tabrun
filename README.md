@@ -27,7 +27,7 @@ This utility can be used to run bash commands in a new terminal.  The utility wo
 	3. chmod +x install.sh
 	4. sudo ./install.sh
 
-### Supported Platforms:
+### Supported Platform
 
 	This utility is supported only in Mac OSX.
 
