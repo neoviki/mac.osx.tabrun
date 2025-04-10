@@ -22,10 +22,8 @@ This utility can be used to run bash commands in a new terminal.  The utility wo
 
 ### How to install this package?
 
-	1. git clone <repo>
-	2. cd src/
-	3. chmod +x install.sh
-	4. sudo ./install.sh
+	1. chmod +x install.sh
+	2. sudo ./install.sh
 
 ### Supported Platform
 

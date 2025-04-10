@@ -1,10 +1,11 @@
 #! /bin/bash
 : '
-   Linux command line utility installer. 
-    				-->   [ Author ]  Viki (a) Vignesh Natarajan 
-				-->   [ Domain ]  https://vikiworks.io 
+   Linux command line utility installer.
+    			-->   [ Author ]  Viki (a) V Natarajan
+				-->   [ Domain ]  https://viki.design
 '
 
+cd src
 UTILITY_NAME="tabrun"
 
 INSTALL_DIR="/usr/bin"
@@ -17,7 +18,7 @@ get_installation_directory(){
     if [ ! -z "$linux_system" ]; then
         echo "[ status ] Linux System "
         INSTALL_DIR="/usr/bin"
-	
+
 	#VIKI WARNING
 	echo "ERROR: This utility is supported only for Mac OSX."
 	exit 1
@@ -31,7 +32,7 @@ get_installation_directory(){
 
 install_util(){
     chmod +x ./$UTILITY_NAME
-    #check sudo 
+    #check sudo
     cp ./$UTILITY_NAME $INSTALL_DIR
 }
 
